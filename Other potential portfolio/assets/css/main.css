@@ -1,12 +1,79 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
 @import url("font-awesome.min.css");
 
-/*
-	Escape Velocity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
+.cd-3d-portfolio .projects .row {
+	height: 25vh;
+	position: relative;
+	z-index: 1;
+	/* position its children in a 3d space */
+	transform-style: preserve-3d;
+	transform: translateZ(-50vw);
+	transition: transform 0.6s cubic-bezier(0.5, 0, 0.1, 1);
+  }
+   
+  .cd-3d-portfolio .projects .row > li {
+	/* this is the single project */
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+  }
+  .cd-3d-portfolio .projects .row > li.front-face {
+	transform: translateZ(50vw);
+  }
+  .cd-3d-portfolio .projects .row > li.right-face {
+	transform: rotateY(90deg) translateZ(50vw);
+  }
+  .cd-3d-portfolio .projects .row > li.left-face {
+	transform: rotateY(-90deg) translateZ(50vw);
+  }
+  .cd-3d-portfolio .projects .row > li.back-face {
+	transform: rotateY(180deg) translateZ(50vw);
+  }
+  .cd-3d-portfolio .projects .project-image {
+	position: relative;
+	width: 100%;
+	height: 25%;
+	transition: transform 0.6s;
+  }
+  .cd-3d-portfolio .projects .project-image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	height: 240%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+   
+  .cd-3d-portfolio .projects .project-content {
+	position: absolute;
+	/* place the content right below the project image */
+	top: 60%;
+	width: 100%;
+	background: white;
+  }
+  .no-preserve3d .cd-3d-portfolio .projects .row {
+	/* fallback for browsers that don't support the preser3d property */
+  transform: translateZ(0);
+}
+.no-preserve3d .cd-3d-portfolio .projects .row > li {
+	opacity: 0;
+	transform: translateX(0);
+}
+.no-preserve3d .cd-3d-portfolio .projects .row > li.front-face, 
+.no-preserve3d .cd-3d-portfolio .projects .row > li.right-face, 
+.no-preserve3d .cd-3d-portfolio .projects .row > li.left-face, 
+.no-preserve3d .cd-3d-portfolio .projects .row > li.back-face {
+  transform: translateX(0);
+}
+.no-preserve3d .cd-3d-portfolio .projects .row > li.selected {
+opacity: 1;
+}
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -2688,3 +2755,5 @@
 						}
 
 	}
+
+	
