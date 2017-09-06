@@ -122,7 +122,11 @@ opacity: 1;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-
+section > svg{
+	width:10%;
+	/* margin: 0 0 0 0;
+	padding: 0 0 0 0; */
+}
 /* Containers */
 
 	.container {
