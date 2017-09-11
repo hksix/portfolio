@@ -2295,6 +2295,16 @@
 		display: inline-block;
 		position: relative;
 	}
+	.imageProfile {
+		width: 10%;
+		height: 20px;
+		background-image: url("images/ProfilepicExtended.png");
+		/* background-repeat: no-repeat; */
+		background-size: contain;
+		border: 1px solid red;
+		
+		
+	}
 
 		.image img {
 			border-radius: 4px;
@@ -2420,6 +2430,9 @@
 						transform: rotate(-45deg);
 						display: inline-block;
 						line-height: inherit;
+					}
+					.tech-icon-size{
+						transform: rotate(-45deg);
 					}
 
 		ul.actions {
