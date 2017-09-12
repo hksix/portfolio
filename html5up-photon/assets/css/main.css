@@ -84,9 +84,19 @@
 	.container {
 		width: 60em;
 	}
-	.dasher:hover{
-		/* background-color: blue; */
-		background: url('https://media.giphy.com/media/xT9IgG3XL0zisjYYWQ/giphy.gif')
+	.projectExpand{
+		transition: all 300ms ease;
+	}
+	.projectExpand:hover {
+		/* transition: all 1s ease; */
+		transform: scale(1.5);;
+		position: absolute;
+		/* top:-35px;  */
+		/* left:-35px; */
+		/* width:500px; */
+		height:auto;
+		display:block;
+		z-index:999;
 	}
 
 	@media screen and (max-width: 1680px) {
@@ -549,7 +559,7 @@
 		}
 
 		.row.\31 50\25 {
-			margin: 0 0 -1px 0;
+			/* margin: 0 0 -1px 0; */
 		}
 
 		.row.uniform.\31 50\25 > * {
@@ -2374,7 +2384,12 @@
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			display: flex;
+			align-items: center;
+			/* padding-left: 0.5em; */
+			vertical-align: middle;
+			/* display: table-row; */
+			
 		}
 
 		ul.alt {
@@ -2397,10 +2412,15 @@
 			list-style: none;
 			padding-left: 0;
 		}
+		li{
+			display: flex;
+			align-items: center;
+		}
 
 			ul.icons li {
 				display: inline-block;
 				padding: 0 1.25em 0 0;
+				vertical-align: middle;
 			}
 
 				ul.icons li:last-child {
@@ -2413,13 +2433,18 @@
 
 		ul.major-icons {
 			list-style: none;
-			padding-left: 0;
+			/* padding-left: 0; */
+			
+			/* display:flex; */
+			
 		}
 
 			ul.major-icons li {
+				align-items: center;
 				display: inline-block;
 				padding: 2.5em;
 				text-align: center;
+				vertical-align: middle;
 			}
 
 				ul.major-icons li .icon {
@@ -2435,6 +2460,7 @@
 					margin: 0;
 					text-align: center;
 					width: 8em;
+					
 				}
 
 					ul.major-icons li .icon:before {
@@ -2444,6 +2470,7 @@
 						transform: rotate(-45deg);
 						display: inline-block;
 						line-height: inherit;
+						
 					}
 					.tech-icon-size{
 						transform: rotate(-45deg);

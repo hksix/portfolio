@@ -42,6 +42,16 @@
 
 		// Scrolly.
 			$('.scrolly').scrolly();
+		$("#investRegret").hover(
+				function() {
+					$(this).attr("src", "https://media.giphy.com/media/xT9IgG3XL0zisjYYWQ/giphy.gif");
+				},
+				function() {
+					$(this).attr("src", 'images/investRegret.png');
+					
+				
+				}                         
+			);
 
 	});
 
