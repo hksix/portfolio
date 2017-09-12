@@ -52,7 +52,16 @@
 				
 				}                         
 			);
-
+			$("#dasher").hover(
+				function() {
+					$(this).attr("src", "https://j.gifs.com/qjPL5y.gif");
+				},
+				function() {
+					$(this).attr("src", 'images/dasher.jpg');
+					
+				
+				}                         
+			);
 	});
 
 })(jQuery);
